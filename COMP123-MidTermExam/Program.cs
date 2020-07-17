@@ -1,4 +1,13 @@
-﻿using System;
+﻿/*
+ * Author's name       : Eunbee Lee
+ * student number      : 301083645
+ * Date last modified  : 2020/Jul/17
+ * Program description : Lottery number generating program for the midterm
+ * Revision History    : 2020/Jul/17
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

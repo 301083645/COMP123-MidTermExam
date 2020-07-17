@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace COMP123_MidTermExam
 {
     /**
@@ -57,7 +58,7 @@ namespace COMP123_MidTermExam
         {
             get
             {
-                return this._elementList;
+                return this._numberList;
 
             }
         }
@@ -121,7 +122,10 @@ namespace COMP123_MidTermExam
 
         private void _initialize()
         {
-            
+            _numberList = new List<int>();
+            _elementList = new List<int>();
+            _random = new Random();
+
             
         }
 
@@ -129,7 +133,10 @@ namespace COMP123_MidTermExam
 
         private void _build()
         {
-            
+            for (int i = 1; i <= SetSize; i++)
+            {
+                NumberList.Add(i);
+            }
         }
 
         // OVERRIDEN METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -165,7 +172,30 @@ namespace COMP123_MidTermExam
 
         public void PickElements()
         {
-            throw new System.NotImplementedException();
+            
+                if (ElementList.Count > 0)
+                {
+                    ElementList.Clear();
+                    NumberList.Clear();
+                    _build();
+                }
+
+            // create loop to add number to ElementList & remove number from NumberList   
+            for (int i = 1; i <= ElementNumber; i++)
+            {
+                int num = random.Next(NumberList.Count);                                
+
+                ElementList.Add(NumberList[num]);                                     
+                NumberList.RemoveAt(num);      
+                
+
+            }
+
+            ElementList.Sort();
+
+
+
+
         }
     }
 }
