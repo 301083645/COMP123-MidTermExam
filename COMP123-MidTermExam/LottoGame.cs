@@ -121,7 +121,7 @@ namespace COMP123_MidTermExam
         // CREATE the private _initialize method here -----------------------------
 
         private void _initialize()
-        {
+        {   // instantiate new objects 
             _numberList = new List<int>();
             _elementList = new List<int>();
             _random = new Random();
@@ -133,6 +133,7 @@ namespace COMP123_MidTermExam
 
         private void _build()
         {
+            // Add integer to NumberList from 1 to SetSize
             for (int i = 1; i <= SetSize; i++)
             {
                 NumberList.Add(i);
@@ -174,9 +175,10 @@ namespace COMP123_MidTermExam
         {
             
                 if (ElementList.Count > 0)
-                {
+                {   // clear if there is elements in ElementList
                     ElementList.Clear();
                     NumberList.Clear();
+                    // rebuild NumberList
                     _build();
                 }
 
@@ -191,6 +193,7 @@ namespace COMP123_MidTermExam
 
             }
 
+            // sort ascending order small to large
             ElementList.Sort();
 
 

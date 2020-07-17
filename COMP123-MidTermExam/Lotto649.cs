@@ -39,6 +39,7 @@ namespace COMP123_MidTermExam
         {
             for (int numberofTicket = 1; numberofTicket <= 6; numberofTicket++) {
                 PickElements();
+                Console.Write($"Ticket {numberofTicket}:  ");
                 Console.WriteLine(ToString());
             }
         }
